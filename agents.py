@@ -31,7 +31,7 @@ from tools import search_tool, BloodTestReportTool
 
 ### Loading LLM
 llm = ChatGoogleGenerativeAI(
-    model="gemini-pro",
+    model="gemini-1.5-pro",
     google_api_key=os.getenv("GOOGLE_API_KEY"),
     temperature=0.7
 )
