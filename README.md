@@ -58,6 +58,63 @@ python main.py
 
 The API will be available at `http://localhost:8000`
 
+## API Documentation
+
+### 1. Health Check
+
+**Endpoint:** `GET /`
+
+**Description:**
+Check if the API is running.
+
+**Response Example:**
+```json
+{
+  "message": "Blood Test Report Analyser API is running"
+}
+```
+
+---
+
+### 2. Analyze Blood Test Report
+
+**Endpoint:** `POST /analyze`
+
+**Description:**
+Upload a PDF blood test report and get AI-powered analysis and recommendations.
+
+**Request:**
+- Content-Type: `multipart/form-data`
+- Fields:
+  - `file`: (required) PDF file to upload
+  - `query`: (optional) Your question or request (default: "Summarise my Blood Test Report")
+
+**Request Example (using curl):**
+```bash
+curl -X POST "http://localhost:8000/analyze" \
+  -F "file=@data/sample.pdf" \
+  -F "query=Summarise my Blood Test Report"
+```
+
+**Successful Response Example:**
+```json
+{
+  "status": "success",
+  "query": "Summarise my Blood Test Report",
+  "analysis": "<AI generated analysis here>",
+  "file_processed": "sample.pdf"
+}
+```
+
+**Error Response Example:**
+```json
+{
+  "detail": "Error processing blood report: <error message>"
+}
+```
+
+---
+
 ## API Endpoints
 
 - `GET /`: Health check endpoint

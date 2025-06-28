@@ -266,12 +266,7 @@ python main.py
 
 ---
 
-## **📞 SUPPORT**
 
-For issues or questions:
-1. Check the README.md file
-2. Review this bug fixes summary
-3. Check the code comments for implementation details
 
 ---
 
