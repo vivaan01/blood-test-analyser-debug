@@ -41,7 +41,7 @@ help_patients = Task(
 - Any follow-up tests that might be recommended""",
 
     agent=doctor,
-    tools=[BloodTestReportTool().read_data_tool],
+    tools=[BloodTestReportTool()],
     async_execution=False,
 )
 
@@ -60,7 +60,7 @@ nutrition_analysis = Task(
 - When to consult a registered dietitian""",
 
     agent=doctor,
-    tools=[BloodTestReportTool().read_data_tool],
+    tools=[BloodTestReportTool()],
     async_execution=False,
 )
 
@@ -79,7 +79,7 @@ exercise_planning = Task(
 - Gradual progression recommendations""",
 
     agent=doctor,
-    tools=[BloodTestReportTool().read_data_tool],
+    tools=[BloodTestReportTool()],
     async_execution=False,
 )
 
@@ -96,6 +96,6 @@ verification = Task(
 - Recommendations for additional information if needed""",
 
     agent=doctor,
-    tools=[BloodTestReportTool().read_data_tool],
+    tools=[BloodTestReportTool()],
     async_execution=False
 )

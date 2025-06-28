@@ -24,7 +24,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-from crewai.agents import Agent
+from crewai import Agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from tools import search_tool, BloodTestReportTool
@@ -48,7 +48,7 @@ doctor=Agent(
         "You always provide evidence-based medical advice and recommendations. "
         "You understand the importance of accurate diagnosis and patient safety."
     ),
-    tools=[BloodTestReportTool().read_data_tool],
+    tools=[BloodTestReportTool()],
     llm=llm,
     max_iter=3,
     max_rpm=10,

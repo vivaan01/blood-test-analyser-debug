@@ -25,37 +25,26 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from crewai_tools import tools
-from crewai_tools.tools.serper_dev_tool import SerperDevTool
+from crewai_tools import SerperDevTool
 from langchain_community.document_loaders import PyPDFLoader
+from crewai_tools import RagTool
 
 ## Creating search tool
 search_tool = SerperDevTool()
 
 ## Creating custom pdf reader tool
-class BloodTestReportTool():
-    def read_data_tool(self, path='data/sample.pdf'):
-        """Tool to read data from a pdf file from a path
+class BloodTestReportTool(RagTool):
+    name: str = "BloodTestReportReader"
+    description: str = "Reads and extracts text from a blood test PDF report."
 
-        Args:
-            path (str, optional): Path of the pdf file. Defaults to 'data/sample.pdf'.
-
-        Returns:
-            str: Full Blood Test report file
-        """
-        
+    def _run(self, path='data/sample.pdf'):
         docs = PyPDFLoader(file_path=path).load()
-
         full_report = ""
         for data in docs:
-            # Clean and format the report data
             content = data.page_content
-            
-            # Remove extra whitespaces and format properly
             while "\n\n" in content:
                 content = content.replace("\n\n", "\n")
-                
             full_report += content + "\n"
-            
         return full_report
 
 ## Creating Nutrition Analysis Tool
@@ -80,3 +69,13 @@ class ExerciseTool:
     def create_exercise_plan_tool(self, blood_report_data):        
         # TODO: Implement exercise planning logic here
         return "Exercise planning functionality to be implemented"
+
+def blood_test_report_reader(path='data/sample.pdf'):
+    docs = PyPDFLoader(file_path=path).load()
+    full_report = ""
+    for data in docs:
+        content = data.page_content
+        while "\n\n" in content:
+            content = content.replace("\n\n", "\n")
+        full_report += content + "\n"
+    return full_report
