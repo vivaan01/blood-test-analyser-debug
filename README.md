@@ -21,9 +21,15 @@ A comprehensive FastAPI-based application that uses AI to analyze blood test rep
 - **Nutritionist Agent**: Clinical nutrition expert for dietary recommendations
 - **Exercise Specialist**: Exercise physiology expert for fitness planning
 
+## **Workflow Design**
+![image2](https://github.com/user-attachments/assets/745cb000-6321-450a-9cbe-7b1621db9643)
+
+
+
 ### **Technology Stack**
 - **Backend**: FastAPI with async processing
-- **AI Framework**: CrewAI with Google Gemini 1.5 Pro
+- **AI Framework**: CrewAI with Google Gemini 1.5 Pro[Uploading image…]()
+
 - **Database**: SQLite with SQLAlchemy ORM
 - **Cache**: Redis for performance optimization
 - **PDF Processing**: PyPDF2 for document extraction
