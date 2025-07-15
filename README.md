@@ -31,7 +31,7 @@ A comprehensive FastAPI-based application that uses AI to analyze blood test rep
 
 ### **Technology Stack**
 - **Backend**: FastAPI with async processing
-- **AI Framework**: CrewAI with Google Gemini 1.5 Pro[Uploading image…]()
+- **AI Framework**: CrewAI with Google Gemini 1.5 Pro
 
 - **Database**: SQLite with SQLAlchemy ORM
 - **Cache**: Redis for performance optimization
