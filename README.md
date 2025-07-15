@@ -21,8 +21,8 @@ A comprehensive FastAPI-based application that uses AI to analyze blood test rep
 - **Nutritionist Agent**: Clinical nutrition expert for dietary recommendations
 - **Exercise Specialist**: Exercise physiology expert for fitness planning
 
-## **Workflow Design**
-![image2](https://github.com/user-attachments/assets/745cb000-6321-450a-9cbe-7b1621db9643)
+<!--  ## **Workflow Design**
+![image2](https://github.com/user-attachments/assets/745cb000-6321-450a-9cbe-7b1621db9643)-->
 
 
 ## **LLD(Data-Flow-Diagram)**
