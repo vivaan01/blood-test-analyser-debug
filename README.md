@@ -25,6 +25,9 @@ A comprehensive FastAPI-based application that uses AI to analyze blood test rep
 ![image2](https://github.com/user-attachments/assets/745cb000-6321-450a-9cbe-7b1621db9643)
 
 
+## **LLD(Data-Flow-Diagram)**
+<img width="936" height="671" alt="LLD-BLOOD-TEST-ANALYSER" src="https://github.com/user-attachments/assets/05711f4a-a662-4cd5-8719-695bb116430e" />
+
 
 ### **Technology Stack**
 - **Backend**: FastAPI with async processing
